@@ -4,7 +4,7 @@ TARGET=hackrf
 build: $(TARGET)
 
 $(TARGET): src/main.c
-	gcc -o $@ $?
+	gcc -o $@ -lhackrf -lfftw3f -lm $?
 
 clean:
 	rm -vf $(TARGET)
